@@ -96,6 +96,26 @@
       border-radius: 16px;
       padding: 14px;
     }
+    .cta-box {
+      margin-top: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 16px 34px rgba(27,45,35,0.06);
+    }
+    .cta-box a {
+      color: white;
+      background: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 14px 18px;
+      border-radius: 16px;
+      margin-top: 8px;
+    }
     @media (max-width: 840px) {
       .grid { grid-template-columns: 1fr; }
       .top { flex-direction: column; align-items: flex-start; }
@@ -110,7 +130,7 @@
         <h1>Teaser Content Hub</h1>
         <p class="lead">Five launch posts designed to build awareness, explain the product, and convert Chicago users into waitlist signups before summer launch.</p>
       </div>
-      <a href="index.html">Back to landing page</a>
+      <a href="landing-page-preview.html">Back to landing page</a>
     </div>
 
     <div class="grid">
@@ -147,7 +167,7 @@
         <div class="label">Core copy</div>
         <div class="copy"><p>We have already tested Connect My Tribe with real users and are actively improving the experience before launch. Now we are turning that feedback into a stronger Chicago community product.</p></div>
         <div class="label">CTA</div>
-        <p>Follow the build and join the waitlist.</p>
+        <p>Follow the build, join the waitlist, and share anonymous product feedback.</p>
       </article>
 
       <article class="card">
@@ -168,6 +188,21 @@
         <p>Drive viewers from social posts to the waitlist page and build launch anticipation.</p>
       </article>
     </div>
+
+    <section class="cta-box">
+      <div style="text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-size: .9rem; margin-bottom: 8px;">Feedback loop</div>
+      <h2 style="margin: 0 0 10px;">Help us improve Connect My Tribe</h2>
+      <p>We are collecting anonymous feedback about what worked well, what did not, and what we should improve next. Use the same form across teaser traffic, website visitors, and logged-in users so the feedback can roll into one daily recommendation report.</p>
+      <a data-feedback-form-link href="https://forms.gle/replace-with-connect-my-tribe-feedback-form" target="_blank" rel="noreferrer">Open anonymous feedback form</a>
+    </section>
   </div>
+
+  <script>
+    const GOOGLE_FEEDBACK_FORM_URL = "https://forms.gle/replace-with-connect-my-tribe-feedback-form";
+
+    document.querySelectorAll("[data-feedback-form-link]").forEach((link) => {
+      link.href = GOOGLE_FEEDBACK_FORM_URL;
+    });
+  </script>
 </body>
 </html>
